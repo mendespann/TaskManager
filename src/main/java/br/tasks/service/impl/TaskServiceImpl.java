@@ -1,3 +1,6 @@
+/**
+ * Package for task-related service implementation classes.
+ */
 package br.tasks.service.impl;
 
 import br.tasks.dto.TaskDTO;
@@ -8,30 +11,59 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+/**
+ * Implementation of the task service.
+ */
 @Service
-public class TaskServiceImpl implements TaskService {
-    private TaskRepository taskRepository;
+public final class TaskServiceImpl implements TaskService {
+    /**
+     * Repository for tasks.
+     */
+    private final TaskRepository repository;
 
-    public TaskServiceImpl(TaskRepository taskRepository) {
-        this.taskRepository = taskRepository;
+    /**
+     * Constructs a new task service implementation.
+     * @param taskRepository the repository for tasks
+     */
+    public TaskServiceImpl(final TaskRepository taskRepository) {
+        this.repository = taskRepository;
     }
 
-    public List<TaskDTO> createTask(TaskDTO task) {
-        taskRepository.save(task);
+    /**
+     * Creates a new task and returns all tasks.
+     * @param task the task to create
+     * @return all tasks
+     */
+    public List<TaskDTO> createTask(final TaskDTO task) {
+        repository.save(task);
         return listAll();
     }
 
+    /**
+     * Returns all tasks.
+     * @return all tasks
+     */
     public List<TaskDTO> listAll() {
-        return taskRepository.findAll();
+        return repository.findAll();
     }
 
-    public List<TaskDTO> updateTask(TaskDTO task) {
-        taskRepository.save(task);
+    /**
+     * Updates a task and returns all tasks.
+     * @param task the task to update
+     * @return all tasks
+     */
+    public List<TaskDTO> updateTask(final TaskDTO task) {
+        repository.save(task);
         return listAll();
     }
 
-    public List<TaskDTO> deleteTask(Long id) {
-        taskRepository.deleteById(id);
+    /**
+     * Deletes a task by its ID and returns all tasks.
+     * @param id the ID of the task to delete
+     * @return all tasks
+     */
+    public List<TaskDTO> deleteTask(final Long id) {
+        repository.deleteById(id);
         return listAll();
     }
 

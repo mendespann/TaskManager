@@ -24,7 +24,7 @@ Para a organização estrutural, o projeto foi baseado no padrão de arquitetura
   
 - **TaskApplicationTests.java**: Classe de testes unitários para a aplicação.
 
-## Diagrama de contexto
+## Diagrama de Contexto
 
 ![Texto alternativo](img/diagrama.png)
 
