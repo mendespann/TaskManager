@@ -1,10 +1,10 @@
 # Gerenciador de Tarefas 📝✨
 
-Este é um projeto Java que utiliza o Maven como sistema de build, Spring Boot como framework e Spring Data JPA como ferramente de gerenciamento e manutenção de banco de dados. 
+Este é um projeto Java que utiliza o Maven como sistema de build, Spring Boot como framework e Spring Data JPA como ferramenta de gerenciamento e manutenção de banco de dados.
 
 A aplicação é um Gerenciador de Tarefas, permitindo criar, listar, atualizar e deletar tarefas.
 
-O projeto ainda está em construção, novas funcionalidades serão adicionadas! 😊
+O projeto ainda está em construção, novas funcionalidades serão adicionadas! No final do readme você consegue conferir os próximos passos. 😊
 
 ## Como Funciona:
 
@@ -61,3 +61,24 @@ Você pode testar os endpoints da API usando o Postman da seguinte maneira:
      - Substitua `{id}` pelo ID da tarefa que deseja deletar.
   
 Certifique-se de substituir `http://localhost:8080` pela URL correta da sua aplicação, se necessário.
+
+## Próximos passos
+
+Esta seção destaca as próximas etapas do projeto, bem como as funcionalidades em desenvolvimento para futura implementação. Aqui, você pode acompanhar o progresso e as melhorias que pretendo adicionar.
+
+### Checklist de Funcionalidades Backend
+- Implementação CRUD ✅
+- Documentação Swagger
+- Documentação JavaDoc e Checkstyle
+- Diagrama de Arquitetura
+- Testes Unitários
+- Testes Automatizados
+- Filtro de tarefas
+
+### Checklist de Funcionalidades Frontend
+- Criação de design da página
+- Integração com a API do backend
+- Formulários para criação e edição de tarefas
+- Listagem de tarefas com opção para filtragem
+- Responsividade para diferentes tamanhos de tela
+- Testes de interface
