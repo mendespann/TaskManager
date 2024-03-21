@@ -1,12 +1,12 @@
 # Gerenciador de Tarefas 📝✨
 
-Este é um projeto Java que utiliza o Maven como sistema de build, Spring Boot como framework e Spring Data JPA como ferramenta de gerenciamento e manutenção de banco de dados.
+Este é um projeto Java que utiliza o Maven como sistema de build, Spring Boot como framework e Spring Data JPA como ferramenta de gerenciamento e manutenção de banco de dados Postgres.
 
 A aplicação é um Gerenciador de Tarefas, permitindo criar, listar, atualizar e deletar tarefas.
 
 O projeto ainda está em construção, novas funcionalidades serão adicionadas! No final do readme você consegue conferir os próximos passos. 😊
 
-## Como Funciona:
+## Como Funciona
 
 Para a organização estrutural, o projeto foi baseado no padrão de arquitetura MVC (Model-View-Controller)
 
@@ -16,13 +16,17 @@ Para a organização estrutural, o projeto foi baseado no padrão de arquitetura
   
 - **TaskService.java e TaskServiceImpl.java**: Interface e implementação do serviço com a lógica de negócios para gerenciamento de tarefas.
   
-- **TaskRepository.java**: Repositório que interage com o banco de dados para persistir as tarefas.
+- **TaskRepository.java**: Repositório que interage com o banco de dados (Postgres) para persistir as tarefas.
   
 - **TaskDTO.java**: Objeto de Transferência de Dados (DTO) usado para transferir dados de tarefas pela aplicação.
   
 - **application.properties**: Arquivo de configuração para definir propriedades da aplicação Spring Boot, como configurações de banco de dados.
   
 - **TaskApplicationTests.java**: Classe de testes unitários para a aplicação.
+
+## Diagrama de contexto
+
+![Texto alternativo](img/diagrama.png)
 
 ## Como Testar os Endpoints no Postman
 
@@ -31,7 +35,8 @@ Você pode testar os endpoints da API usando o Postman da seguinte maneira:
 1. **Criar Tarefa (POST)**:
    - Endpoint: `http://localhost:8080/tasks/create`
    - Corpo da Requisição (JSON):
-     ```json
+
+    ```json
      {
        "titulo": "Minha Nova Tarefa",
        "descricao": "Descrição da Tarefa...",
@@ -39,13 +44,14 @@ Você pode testar os endpoints da API usando o Postman da seguinte maneira:
        "dataConclusao": "2024-03-21"
      }
      ```
-   
+
 2. **Listar Todas as Tarefas (GET)**:
    - Endpoint: `http://localhost:8080/tasks/list`
-   
+
 3. **Atualizar Tarefa Existente (PUT)**:
    - Endpoint: `http://localhost:8080/tasks/update`
    - Corpo da Requisição (JSON):
+
      ```json
      {
        "id": 1,
@@ -67,18 +73,19 @@ Certifique-se de substituir `http://localhost:8080` pela URL correta da sua apli
 Esta seção destaca as próximas etapas do projeto, bem como as funcionalidades em desenvolvimento para futura implementação. Aqui, você pode acompanhar o progresso e as melhorias que pretendo adicionar.
 
 ### Checklist de Funcionalidades Backend
+
 - Implementação CRUD ✅
 - Documentação Swagger
 - Documentação JavaDoc e Checkstyle
-- Diagrama de Arquitetura
+- Diagrama de Contexto ✅
 - Testes Unitários
 - Testes Automatizados
 - Filtro de tarefas
 
 ### Checklist de Funcionalidades Frontend
-- Criação de design da página
+
+- Prototipagem
+- Design de Interface
 - Integração com a API do backend
-- Formulários para criação e edição de tarefas
-- Listagem de tarefas com opção para filtragem
 - Responsividade para diferentes tamanhos de tela
 - Testes de interface
