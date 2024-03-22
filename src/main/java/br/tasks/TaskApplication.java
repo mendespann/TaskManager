@@ -3,7 +3,9 @@ package br.tasks;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SuppressWarnings("checkstyle:HideUtilityClassConstructor")
+/**
+ * Main class for the tasks.
+ */
 @SpringBootApplication
 public class TaskApplication {
 	/**

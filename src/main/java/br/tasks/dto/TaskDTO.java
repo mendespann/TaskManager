@@ -39,7 +39,7 @@ public class TaskDTO {
     /**
      * Task status: true for finished, false not finished.
      */
-    private boolean status;
+    private boolean completed;
 
     /**
      * Task conclusion date.
