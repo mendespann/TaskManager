@@ -1,10 +1,18 @@
-# Gerenciador de Tarefas 📝✨
+# Gerenciador de Tarefas 📝
 
 Este é um projeto Java que utiliza o Maven como sistema de build, Spring Boot como framework e Spring Data JPA como ferramenta de gerenciamento e manutenção de banco de dados Postgres.
 
-A aplicação é um Gerenciador de Tarefas, permitindo criar, listar, atualizar e deletar tarefas.
+A aplicação é um **Gerenciador de Tarefas - Task Manager**, permitindo criar, listar, atualizar e deletar tarefas.
 
-O projeto ainda está em construção, novas funcionalidades serão adicionadas! No final do readme você consegue conferir os próximos passos. 😊
+O projeto ainda está em construção e novas funcionalidades serão adicionadas. No final do readme, você consegue conferir os próximos passos 😊
+
+## Tecnologias
+
+<div>
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white">
+  <img src="https://img.shields.io/badge/SpringBoot-6DB33F?style=for-the-badge&logo=Spring&logoColor=white">
+  <img src="https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white">
+</div>
 
 ## Como Funciona
 
@@ -24,47 +32,67 @@ Para a organização estrutural, o projeto foi baseado no padrão de arquitetura
   
 - **TaskApplicationTests.java**: Classe de testes unitários para a aplicação.
 
-## Diagrama de contexto
+## Diagrama de Contexto
 
 ![Texto alternativo](img/diagrama.png)
 
-## Como Testar os Endpoints no Postman
+## Como Testar os Endpoints
 
-Você pode testar os endpoints da API usando o Postman da seguinte maneira:
+Abra o terminal na raiz do projeto e execute o comando `mvn clean install`.
+Após a compilação bem-sucedida, execute a aplicação.
+A seguir, você pode escolher um dos caminhos:
 
-1. **Criar Tarefa (POST)**:
-   - Endpoint: `http://localhost:8080/tasks/create`
-   - Corpo da Requisição (JSON):
+**Swagger**
+
+1. Com a aplicação em execução, abra um navegador web e acesse a URL http://localhost:8080/swagger-ui/index.html#.
+2. Para testar um endpoint, clique nele, preencha os parâmetros ou corpo da requisição necessários e clique em "Try it out!".
+
+**Postman**
+
+1. Abra o Postman.
+2. Clique em "New" e depois em "Request".
+3. Digite a URL do endpoint que você deseja testar no campo de texto URL.
+4. Selecione o método HTTP apropriado (GET, POST, PUT, DELETE, etc.).
+5. Se necessário, adicione parâmetros, corpo da requisição e cabeçalhos.
+6. Clique em "Send" para enviar a requisição.
+
+### **Criar Tarefa (POST)**
+
+- Endpoint: `http://localhost:8080/tasks/create`
+- Corpo da Requisição (JSON):
 
     ```json
-     {
-       "titulo": "Minha Nova Tarefa",
-       "descricao": "Descrição da Tarefa...",
-       "concluida": false,
-       "dataConclusao": "2024-03-21"
-     }
+      {
+        "title": "Tarefa",
+        "description": "Essa é a descrição da tarefa",
+        "completed": false,
+        "dateOfConclusion": "2024-03-22"
+      }
      ```
 
-2. **Listar Todas as Tarefas (GET)**:
-   - Endpoint: `http://localhost:8080/tasks/list`
+### **Listar Todas as Tarefas (GET)**
 
-3. **Atualizar Tarefa Existente (PUT)**:
-   - Endpoint: `http://localhost:8080/tasks/update`
-   - Corpo da Requisição (JSON):
+- Endpoint: `http://localhost:8080/tasks/list`
+
+### **Atualizar Tarefa Existente (PUT)**
+
+- Endpoint: `http://localhost:8080/tasks/update`
+- Corpo da Requisição (JSON):
 
      ```json
-     {
-       "id": 1,
-       "titulo": "Tarefa Atualizada",
-       "descricao": "Nova Descrição da Tarefa...",
-       "concluida": true,
-       "dataConclusao": "2024-03-22"
-     }
+      {
+        "id": "1",
+        "title": "Tarefa",
+        "description": "Essa é a descrição da tarefa",
+        "completed": false,
+        "dateOfConclusion": "2024-03-22"
+      }
      ```
 
-4. **Deletar Tarefa por ID (DELETE)**:
-   - Endpoint: `http://localhost:8080/tasks/delete/{id}`
-     - Substitua `{id}` pelo ID da tarefa que deseja deletar.
+### **Deletar Tarefa por ID (DELETE)**
+
+- Endpoint: `http://localhost:8080/tasks/delete/{id}`
+- Substitua `{id}` pelo ID da tarefa que deseja deletar.
   
 Certifique-se de substituir `http://localhost:8080` pela URL correta da sua aplicação, se necessário.
 
@@ -75,11 +103,10 @@ Esta seção destaca as próximas etapas do projeto, bem como as funcionalidades
 ### Checklist de Funcionalidades Backend
 
 - Implementação CRUD ✅
-- Documentação Swagger
-- Documentação JavaDoc e Checkstyle
+- Documentação Swagger ✅
+- Documentação JavaDoc e Checkstyle ✅
 - Diagrama de Contexto ✅
-- Testes Unitários
-- Testes Automatizados
+- Testes Unitários ✅
 - Filtro de tarefas
 
 ### Checklist de Funcionalidades Frontend
