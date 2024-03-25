@@ -9,7 +9,9 @@ import br.tasks.service.TaskService;
 
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 /**
  * Implementation of the task service.
@@ -23,6 +25,7 @@ public final class TaskServiceImpl implements TaskService {
 
     /**
      * Constructs a new task service implementation.
+     * 
      * @param taskRepository the repository for tasks
      */
     public TaskServiceImpl(final TaskRepository taskRepository) {
@@ -31,6 +34,7 @@ public final class TaskServiceImpl implements TaskService {
 
     /**
      * Creates a new task and returns all tasks.
+     * 
      * @param task the task to create
      * @return all tasks
      */
@@ -41,6 +45,7 @@ public final class TaskServiceImpl implements TaskService {
 
     /**
      * Returns all tasks.
+     * 
      * @return all tasks
      */
     public List<TaskDTO> listAll() {
@@ -49,6 +54,7 @@ public final class TaskServiceImpl implements TaskService {
 
     /**
      * Updates a task and returns all tasks.
+     * 
      * @param task the task to update
      * @return all tasks
      */
@@ -59,10 +65,14 @@ public final class TaskServiceImpl implements TaskService {
 
     /**
      * Deletes a task by its ID and returns all tasks.
+     * 
      * @param id the ID of the task to delete
      * @return all tasks
      */
     public List<TaskDTO> deleteTask(final Long id) {
+        if (!repository.existsById(id)) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Task with id " + id + " does not exist");
+        }
         repository.deleteById(id);
         return listAll();
     }

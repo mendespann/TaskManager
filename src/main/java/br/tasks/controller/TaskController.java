@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import java.util.List;
 import br.tasks.service.TaskService;
+import jakarta.validation.Valid;
 import br.tasks.dto.TaskDTO;
 
 /**
@@ -39,7 +40,7 @@ public class TaskController {
      * @return List<TaskDTO>
      */
     @PostMapping("/create")
-    List<TaskDTO> createTask(@RequestBody final TaskDTO task) {
+    List<TaskDTO> createTask(@RequestBody @Valid final TaskDTO task) {
         return taskService.createTask(task);
     }
 

@@ -1,10 +1,18 @@
-# Gerenciador de Tarefas 📝✨
+# Gerenciador de Tarefas 📝
 
 Este é um projeto Java que utiliza o Maven como sistema de build, Spring Boot como framework e Spring Data JPA como ferramenta de gerenciamento e manutenção de banco de dados Postgres.
 
-A aplicação é um Gerenciador de Tarefas, permitindo criar, listar, atualizar e deletar tarefas.
+A aplicação é um **Gerenciador de Tarefas - Task Manager**, permitindo criar, listar, atualizar e deletar tarefas.
 
-O projeto ainda está em construção, novas funcionalidades serão adicionadas! No final do readme você consegue conferir os próximos passos. 😊
+O projeto ainda está em construção e novas funcionalidades serão adicionadas. No final do readme, você consegue conferir os próximos passos 😊
+
+## Tecnologias
+
+<div>
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white">
+  <img src="https://img.shields.io/badge/SpringBoot-6DB33F?style=for-the-badge&logo=Spring&logoColor=white">
+  <img src="https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white">
+</div>
 
 ## Como Funciona
 
@@ -28,18 +36,18 @@ Para a organização estrutural, o projeto foi baseado no padrão de arquitetura
 
 ![Texto alternativo](img/diagrama.png)
 
-## Como Testar os Endpoints 
+## Como Testar os Endpoints
 
 Abra o terminal na raiz do projeto e execute o comando `mvn clean install`.
 Após a compilação bem-sucedida, execute a aplicação.
 A seguir, você pode escolher um dos caminhos:
 
-**Swagger** 
+**Swagger**
 
 1. Com a aplicação em execução, abra um navegador web e acesse a URL http://localhost:8080/swagger-ui/index.html#.
 2. Para testar um endpoint, clique nele, preencha os parâmetros ou corpo da requisição necessários e clique em "Try it out!".
 
-**Postman** 
+**Postman**
 
 1. Abra o Postman.
 2. Clique em "New" e depois em "Request".
@@ -98,8 +106,7 @@ Esta seção destaca as próximas etapas do projeto, bem como as funcionalidades
 - Documentação Swagger ✅
 - Documentação JavaDoc e Checkstyle ✅
 - Diagrama de Contexto ✅
-- Testes Unitários
-- Testes Automatizados
+- Testes Unitários ✅
 - Filtro de tarefas
 
 ### Checklist de Funcionalidades Frontend

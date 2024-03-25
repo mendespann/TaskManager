@@ -10,6 +10,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 /**
@@ -29,11 +30,13 @@ public class TaskDTO {
     /**
      * Task title.
      */
+    @NotBlank
     private String title;
 
     /**
      * Task description.
      */
+    @NotBlank
     private String description;
 
     /**
@@ -46,4 +49,11 @@ public class TaskDTO {
      */
     private LocalDate dateOfConclusion;
 
+    public TaskDTO(Long id, String title, String description, boolean completed, LocalDate dateOfConclusion) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.completed = completed;
+        this.dateOfConclusion = dateOfConclusion;
+    }
 }
