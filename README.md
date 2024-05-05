@@ -4,14 +4,11 @@ Este é um projeto Java que utiliza o Maven como sistema de build, Spring Boot c
 
 A aplicação é um **Gerenciador de Tarefas - Task Manager**, permitindo criar, listar, atualizar e deletar tarefas.
 
-O projeto ainda está em construção e novas funcionalidades serão adicionadas. No final do readme, você consegue conferir os próximos passos 😊
-
 ## Tecnologias
 
 <div>
   <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white">
   <img src="https://img.shields.io/badge/SpringBoot-6DB33F?style=for-the-badge&logo=Spring&logoColor=white">
-  <img src="https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white">
 </div>
 
 ## Como Funciona
@@ -107,9 +104,6 @@ Esta seção destaca as próximas etapas do projeto, bem como as funcionalidades
 - Documentação JavaDoc e Checkstyle ✅
 - Diagrama de Contexto ✅
 - Testes Unitários ✅
-- Filtro de tarefas
-
-### Checklist de Funcionalidades Frontend
 
 - Prototipagem
 - Design de Interface
